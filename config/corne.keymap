@@ -4,26 +4,26 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        WF {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <1 2>;
-        };
-
-        FP {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <2 3>;
-        };
-
-        LU {
-            bindings = <&kp APOSTROPHE>;
-            key-positions = <6 7>;
-        };
-
-        UY {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <7 8>;
-        };
+        #
+        # WF {
+        #     bindings = <&kp UNDERSCORE>;
+        #     key-positions = <1 2>;
+        # };
+        #
+        # FP {
+        #     bindings = <&kp KP_MINUS>;
+        #     key-positions = <2 3>;
+        # };
+        #
+        # LU {
+        #     bindings = <&kp APOSTROPHE>;
+        #     key-positions = <6 7>;
+        # };
+        #
+        # UY {
+        #     bindings = <&kp DOUBLE_QUOTES>;
+        #     key-positions = <7 8>;
+        # };
 
         bt_clr {
             bindings = <&bt BT_CLR>;
