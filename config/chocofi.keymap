@@ -64,10 +64,10 @@
 
         Letters {
             bindings = <
-  &kp Q  &kp W  &kp F    &kp P    &kp G      &kp J      &kp L      &kp U      &kp Y    &kp SEMI
-  &hrm_l LALT A  &hrm_l LCTRL R  &hrm_l LGUI S    &hrm_l LSHFT T    &kp D      &kp H      &hrm_r RSHFT N      &hrm_r RGUI E      &hrm_r RCTRL I    &hrm_r RALT O
-  &kp Z  &kp X  &kp C    &kp V    &kp B      &kp K      &kp M      &kp COMMA  &kp DOT  &kp FSLH
-                &kp TAB  &lt 2 RET  &kp ESC    &kp EQUAL  &lt 1 SPACE  &kp BSPC
+  &kp Q         &kp W          &kp F         &kp P          &kp G                          &kp J         &kp L           &kp U           &kp Y           &kp SEMI
+  &hrm_l LALT A &hrm_l LCTRL R &hrm_l LGUI S &hrm_l LSHFT T &kp D                          &kp H         &hrm_r RSHFT N  &hrm_r RGUI E   &hrm_r RCTRL I  &hrm_r RALT O
+  &kp Z         &kp X          &kp C         &kp V          &kp B                          &kp K         &kp M           &kp COMMA       &kp DOT         &kp FSLH
+                                             &kp TAB        &lt 2 RET  &kp ESC   &kp EQUAL &lt 1 SPACE   &kp BSPC
             >;
         };
 
