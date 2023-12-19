@@ -33,15 +33,39 @@
         };
     };
 
+    behaviors {
+        # NOTE: Mix of official doc example and urob properties
+        hrm_l: left_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9>;    // <---[[right-hand keys]]
+            hold-trigger-on-release;
+        };
+        hrm_r: right_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4>;    // <---[[left-hand keys]]
+            hold-trigger-on-release;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Letters {
             bindings = <
   &kp Q  &kp W  &kp F    &kp P    &kp G      &kp J      &kp L      &kp U      &kp Y    &kp SEMI
-  &kp A  &kp R  &kp S    &kp T    &kp D      &kp H      &kp N      &kp E      &kp I    &kp O
+  &hrm_l LALT A  &hrm_l LCTRL R  &hrm_l LGUI S    &hrm_l LSHFT T    &kp D      &kp H      &hrm_r RSHFT N      &hrm_r RGUI E      &hrm_r RCTRL I    &hrm_r RALTGR O
   &kp Z  &kp X  &kp C    &kp V    &kp B      &kp K      &kp M      &kp COMMA  &kp DOT  &kp FSLH
-                &kp TAB  &kp RET  &kp ESC    &kp EQUAL  &kp SPACE  &kp BSPC
+                &kp TAB  &lt 2 RET  &kp ESC    &kp EQUAL  &lt 1 SPACE  &kp BSPC
             >;
         };
 
