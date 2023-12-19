@@ -37,6 +37,7 @@
         // NOTE: Mix of official doc example and urob properties
         hrm_l: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <200>;
@@ -47,6 +48,7 @@
         };
         hrm_r: right_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <200>;
