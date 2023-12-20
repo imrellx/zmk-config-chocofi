@@ -8,10 +8,13 @@
 #define DEF 0
 #define FN 1
 #define SYM 2
+#define NAV 3
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left hand
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
+
+#define ___ &trans
 
 // ---- combos ---- //
 ZMK_COMBO(underscore, &kp UNDERSCORE,    LT3 LT2, DEF)
@@ -53,19 +56,28 @@ ZMK_COMBO(dbl_quotes, &kp DOUBLE_QUOTES, RT2 RT3, DEF)
 
         FN {
             bindings = <
-  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &trans  &kp N7  &kp N8  &kp N9  &trans
-  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp N0  &kp N4  &kp N5  &kp N6  &trans
-  &kp F11  &kp F12  &trans  &trans  &trans     &trans  &kp N1  &kp N2  &kp N3  &trans
-                    &trans  &trans  &trans     &trans  &trans  &trans
+  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     ___     &kp N7  &kp N8  &kp N9  ___   
+  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp N0  &kp N4  &kp N5  &kp N6  ___   
+  &kp F11  &kp F12  ___     ___     ___        ___     &kp N1  &kp N2  &kp N3  ___   
+                    ___     ___     ___        ___     ___     ___   
             >;
         };
 
         SYM {
             bindings = <
-  &trans        &kp LS(UNDER)  &kp MINUS      &kp EQUAL     &trans           &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
-  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &trans         &kp SQT       &kp BSLH      &kp LBKT      &kp RBKT
-  &kp GRAVE     &trans         &trans         &trans        &trans           &trans         &kp LS(DQT)   &kp LS(PIPE)  &kp LS(LBRC)  &kp LS(RBRC)
-                               &trans         &trans        &trans           &trans         &trans        &trans
+  ___           &kp LS(UNDER)  &kp MINUS      &kp EQUAL     ___              &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
+  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    ___            &kp SQT       &kp BSLH      &kp LBKT      &kp RBKT
+  &kp GRAVE     ___            ___            ___           ___              ___            &kp LS(DQT)   &kp LS(PIPE)  &kp LS(LBRC)  &kp LS(RBRC)
+                               ___            ___           ___              ___            ___           ___   
+            >;
+        };
+
+        NAV {
+            bindings = <
+  ___  ___  ___  ___  ___           ___  ___  ___  ___  ___
+  ___  ___  ___  ___  ___           ___  ___  ___  ___  ___
+  ___  ___  ___  ___  ___           ___  ___  ___  ___  ___
+                 ___  ___  ___  ___ ___  ___   
             >;
         };
     };
