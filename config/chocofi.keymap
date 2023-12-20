@@ -94,3 +94,5 @@
         };
     };
 };
+
+/* vim: set filetype=devicetree: */
