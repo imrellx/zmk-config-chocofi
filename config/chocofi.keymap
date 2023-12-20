@@ -21,6 +21,9 @@ ZMK_COMBO(underscore, &kp UNDERSCORE,    LT3 LT2, DEF)
 ZMK_COMBO(minus,      &kp KP_MINUS,      LT2 LT1, DEF)
 ZMK_COMBO(apostr,     &kp APOSTROPHE,    RT1 RT2, DEF)
 ZMK_COMBO(dbl_quotes, &kp DOUBLE_QUOTES, RT2 RT3, DEF)
+
+ZMK_COMBO(lbrack, &kp LBKT, RB1 RB2, DEF)
+ZMK_COMBO(rbrack, &kp RBKT, RB2 RB3, DEF)
 // ---------------- //
 
 #define MAKE_HRM(NAME, TRIGGER_POS) \
