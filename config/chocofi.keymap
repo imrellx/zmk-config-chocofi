@@ -9,17 +9,17 @@
     combos {
         compatible = "zmk,combos";
 
-        UNDERSCORE {
+        USCORE {
             bindings = <&kp UNDERSCORE>;
             key-positions = <LT3 LT2>;
         };
 
-        MINUS {
+        MINUS_ {
             bindings = <&kp KP_MINUS>;
             key-positions = <LT2 LT1>;
         };
 
-        APOSTROPHE {
+        APOSTR {
             bindings = <&kp APOSTROPHE>;
             key-positions = <RT1 RT2>;
         };
@@ -29,7 +29,7 @@
             key-positions = <RT2 RT3>;
         };
 
-        BT_CLR {
+        BT_CLEAR {
             bindings = <&bt BT_CLR>;
             key-positions = <LT4 LT0>;
             layers = <2>;
