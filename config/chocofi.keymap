@@ -5,37 +5,14 @@
 #include "./node-free/helper.h"
 #include "./node-free/keypos-36.h"
 
+#define DEF 0
+
+ZMK_COMBO(underscore, &kp UNDERSCORE,    LT3 LT2, DEF)
+ZMK_COMBO(minus,      &kp KP_MINUS,      LT2 LT1, DEF)
+ZMK_COMBO(apostr,     &kp APOSTROPHE,    RT1 RT2, DEF)
+ZMK_COMBO(dbl_quotes, &kp DOUBLE_QUOTES, RT2 RT3, DEF)
+
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        USCORE {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <LT3 LT2>;
-        };
-
-        MINUS_ {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <LT2 LT1>;
-        };
-
-        APOSTR {
-            bindings = <&kp APOSTROPHE>;
-            key-positions = <RT1 RT2>;
-        };
-
-        DBL_QUOTES {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <RT2 RT3>;
-        };
-
-        BT_CLEAR {
-            bindings = <&bt BT_CLR>;
-            key-positions = <LT4 LT0>;
-            layers = <2>;
-        };
-    };
-
     behaviors {
         // NOTE: Mix of official doc example and urob properties
         hrm_l: left_positional_hold_tap {
@@ -70,7 +47,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Letters {
+        DEF {
             bindings = <
   &kp Q         &kp W          &kp F         &kp P          &kp G                          &kp J         &kp L           &kp U           &kp Y           &kp SEMI
   &hrm_l LALT A &hrm_l LCTRL R &hrm_l LGUI S &hrm_l LSHFT T &kp D                          &kp H         &hrm_r RSHFT N  &hrm_r RGUI E   &hrm_r RCTRL I  &hrm_r RALT O
