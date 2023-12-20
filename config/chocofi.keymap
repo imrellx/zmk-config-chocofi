@@ -31,9 +31,7 @@ ZMK_COMBO(dbl_quotes, &kp DOUBLE_QUOTES, RT2 RT3, DEF)
             quick-tap-ms = <200>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            // TODO: this probably needs to be 15-19 (middle row of the right hand)
-            // (but will be unnecessary/more intuitive anyways when using the nodefree config)
-            hold-trigger-key-positions = <6 7 8 9>;    // <---[[right-hand keys]]
+            hold-trigger-key-positions = <KEYS_R THUMBS>;    // <---[[right-hand keys]]
             hold-trigger-on-release;
         };
 
@@ -45,9 +43,7 @@ ZMK_COMBO(dbl_quotes, &kp DOUBLE_QUOTES, RT2 RT3, DEF)
             quick-tap-ms = <200>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            // TODO: this probably needs to be 10-14 (middle row of the left hand)
-            // (but will be unnecessary/more intuitive anyways when using the nodefree config)
-            hold-trigger-key-positions = <0 1 2 3>;    // <---[[left-hand keys]]
+            hold-trigger-key-positions = <KEYS_L THUMBS>;    // <---[[left-hand keys]]
             hold-trigger-on-release;
         };
     };
