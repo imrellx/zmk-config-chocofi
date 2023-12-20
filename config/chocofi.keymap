@@ -84,4 +84,4 @@ ZMK_COMBO(dbl_quotes, &kp DOUBLE_QUOTES, RT2 RT3, DEF)
     };
 };
 
-/* vim: set filetype=devicetree: */
+/* vim: set filetype=devicetree commentstring=//\ %s: */
