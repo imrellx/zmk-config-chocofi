@@ -2,33 +2,36 @@
 #include <dt-bindings/zmk/keys.h>
 #include <behaviors.dtsi>
 
+#include "./node-free/helper.h"
+#include "./node-free/keypos-36.h"
+
 / {
     combos {
         compatible = "zmk,combos";
 
-        WF {
+        UNDERSCORE {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <1 2>;
+            key-positions = <LT3 LT2>;
         };
 
-        FP {
+        MINUS {
             bindings = <&kp KP_MINUS>;
-            key-positions = <2 3>;
+            key-positions = <LT2 LT1>;
         };
 
-        LU {
+        APOSTROPHE {
             bindings = <&kp APOSTROPHE>;
-            key-positions = <6 7>;
+            key-positions = <RT1 RT2>;
         };
 
-        UY {
+        DBL_QUOTES {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <7 8>;
+            key-positions = <RT2 RT3>;
         };
 
-        bt_clr {
+        BT_CLR {
             bindings = <&bt BT_CLR>;
-            key-positions = <0 4>;
+            key-positions = <LT4 LT0>;
             layers = <2>;
         };
     };
@@ -48,6 +51,7 @@
             hold-trigger-key-positions = <6 7 8 9>;    // <---[[right-hand keys]]
             hold-trigger-on-release;
         };
+
         hrm_r: right_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
