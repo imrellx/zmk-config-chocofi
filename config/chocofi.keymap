@@ -6,6 +6,8 @@
 #include "./node-free/keypos-36.h"
 
 #define DEF 0
+#define FN 1
+#define SYM 2
 
 ZMK_COMBO(underscore, &kp UNDERSCORE,    LT3 LT2, DEF)
 ZMK_COMBO(minus,      &kp KP_MINUS,      LT2 LT1, DEF)
@@ -65,7 +67,7 @@ ZMK_COMBO(dbl_quotes, &kp DOUBLE_QUOTES, RT2 RT3, DEF)
             >;
         };
 
-        Sym {
+        SYM {
             bindings = <
   &trans        &kp LS(UNDER)  &kp MINUS      &kp EQUAL     &trans           &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)
   &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &trans         &kp SQT       &kp BSLH      &kp LBKT      &kp RBKT
