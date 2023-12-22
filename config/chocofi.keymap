@@ -16,6 +16,16 @@
 
 #define ___ &trans
 
+#define MOD_MORPH(NAME, NORMAL, MORPHED, MODS, KEEP_MODS) \
+        NAME: \
+          morph_ ## NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <NORMAL>, <MORPHED>; \
+            mods = <MODS>; \
+            keep-mods = <KEEP_MODS>; \
+          };
+
 // ---- combos ---- //
 #define COMBO_TERM 50
 
