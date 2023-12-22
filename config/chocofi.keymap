@@ -65,6 +65,7 @@ ZMK_COMBO(rbrack, &kp RBKT, RB2 RB3, DEF)
             mods = <(MOD_LGUI | MOD_LSFT | MOD_RGUI | MOD_RSFT)>;
             keep-mods = <(MOD_RSFT|MOD_LSFT)>;
           };
+        MOD_MORPH(bspc_del, &kp BACKSPACE, &kp DELETE, (MOD_LSFT | MOD_RSFT), 0)
     };
 
     keymap {
@@ -75,7 +76,7 @@ ZMK_COMBO(rbrack, &kp RBKT, RB2 RB3, DEF)
   &kp Q         &kp W          &kp F         &kp P          &kp G                            &kp J         &kp L           &kp U           &kp Y           &kp SEMI
   &hrm_l LALT A &hrm_l LCTRL R &hrm_l LGUI S &hrm_l LSHFT T &kp D                            &kp H         &hrm_r RSHFT N  &hrm_r RGUI E   &hrm_r RCTRL I  &hrm_r RALT O
   &kp Z         &kp X          &kp C         &kp V          &kp B                            &kp K         &kp M           &kp COMMA       &kp DOT         &kp FSLH
-                                             &lt NAV TAB    &lt SYM RET  &gresc    &kp EQUAL &lt FN SPACE  &kp BSPC
+                                             &lt NAV TAB    &lt SYM RET  &gresc    &kp EQUAL &lt FN SPACE  &bspc_del
             >;
         };
 
