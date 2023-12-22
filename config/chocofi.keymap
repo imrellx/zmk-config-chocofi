@@ -56,15 +56,9 @@ ZMK_COMBO(rbrack, &kp RBKT, RB2 RB3, DEF)
         MAKE_HRM(hrm_l, KEYS_R THUMBS)
         MAKE_HRM(hrm_r, KEYS_L THUMBS)
 
+        /delete-node/ grave_escape; // The compiler complains otherwise that gresc is already defined
         // NOTE: almost identical to the default gresc, but sends shift with the key to also have ~
-        gresc:
-          grave_escape {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp GRAVE>;
-            mods = <(MOD_LGUI | MOD_LSFT | MOD_RGUI | MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT|MOD_LSFT)>;
-          };
+        MOD_MORPH(gresc, &kp ESC, &kp GRAVE, (MOD_LGUI | MOD_LSFT | MOD_RGUI | MOD_RSFT), (MOD_RSFT | MOD_LSFT))
         MOD_MORPH(bspc_del, &kp BACKSPACE, &kp DELETE, (MOD_LSFT | MOD_RSFT), 0)
     };
 
