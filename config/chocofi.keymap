@@ -27,6 +27,7 @@
           };
 
 // ---- combos ---- //
+#undef COMBO_TERM
 #define COMBO_TERM 50
 
 ZMK_COMBO(underscore, &kp UNDERSCORE,    LT3 LT2, DEF)
