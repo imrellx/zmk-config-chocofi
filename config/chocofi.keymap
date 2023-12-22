@@ -17,6 +17,8 @@
 #define ___ &trans
 
 // ---- combos ---- //
+#define COMBO_TERM 50
+
 ZMK_COMBO(underscore, &kp UNDERSCORE,    LT3 LT2, DEF)
 ZMK_COMBO(minus,      &kp KP_MINUS,      LT2 LT1, DEF)
 ZMK_COMBO(apostr,     &kp APOSTROPHE,    RT1 RT2, DEF)
